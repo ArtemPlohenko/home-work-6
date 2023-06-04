@@ -3,123 +3,97 @@
 "use strict";
 
 // ---- 1 ---- //
-// const list = document.querySelector("#list");
-// const li = list.getElementsByTagName("li");
+const list = document.querySelector("#list");
+const li = list.getElementsByTagName("li");
 
-// alert(li[0].textContent);
-// alert(li[li.length - 1].textContent);
-// alert(li[1].textContent);
-// alert(li[3].textContent);
-// alert(li[2].textContent);
+alert(li[0].textContent);
+alert(li[li.length - 1].textContent);
+alert(li[1].textContent);
+alert(li[3].textContent);
+alert(li[2].textContent);
 
 // ---- 2 ---- //
-// const title = document.querySelector("h1");
-// const myDiv = document.querySelector("#myDiv");
-// const p = myDiv.getElementsByTagName("p");
-// const myList = document.querySelector("#myList");
-// const newLi = myList.getElementsByTagName("li");
-// const span = document.querySelector("span");
+const title = document.querySelector("h1");
+const myDiv = document.querySelector("#myDiv");
+const p = myDiv.getElementsByTagName("p");
+const myList = document.querySelector("#myList");
+const newLi = myList.getElementsByTagName("li");
+const span = document.querySelector("span");
 
-// title.style.backgroundColor = "#66ff66";
+title.style.backgroundColor = "#66ff66";
 
-// p[0].style.fontWeight = "bold";
-// p[1].style.color = "red";
-// p[2].style.textDecoration = "underline";
-// p[3].style.fontStyle = "italic";
-// myList.style.cssText = `display: flex; list-style-type: none;`;
-// span.style.display = "none";
+p[0].style.fontWeight = "bold";
+p[1].style.color = "red";
+p[2].style.textDecoration = "underline";
+p[3].style.fontStyle = "italic";
+myList.style.cssText = `display: flex; list-style-type: none;`;
+span.style.display = "none";
 
 // ---- 3 ---- //
-// const body = document.querySelector("body");
+const body = document.querySelector("body");
 
-// const main = document.createElement("main");
-// main.setAttribute("class", "mainClass check item");
+const main = document.createElement("main");
+main.setAttribute("class", "mainClass check item");
 
-// const div = document.createElement("div");
-// div.setAttribute("id", "myDiv");
+const div = document.createElement("div");
+div.setAttribute("id", "myDiv");
 
-// const p = document.createElement("p");
-// p.textContent = "First paragraph";
+const paragraph = document.createElement("p");
+paragraph.textContent = "First paragraph";
 
-// div.appendChild(p);
-// main.appendChild(div);
-// body.appendChild(main);
+div.appendChild(paragraph);
+main.appendChild(div);
+body.appendChild(main);
 
 // body.document.documentElement.appendChild(main);
 
 // ---- 4 ---- //
-// const fullName = document.querySelector('[data-form="ПІБ"]');
-// const phoneInput = document.querySelector('[data-form="Номер телефону"]');
-// const birthdayInput = document.querySelector('[data-form="Дата народження"]');
-// const emailInput = document.querySelector('[data-form="Електронна пошта"]');
+const fullName = document.querySelector('[data-form="ПІБ"]');
+const phoneInput = document.querySelector('[data-form="Номер телефону"]');
+const birthdayInput = document.querySelector('[data-form="Дата народження"]');
+const emailInput = document.querySelector('[data-form="Електронна пошта"]');
 
-// const btn = document.querySelector(".btn");
-// const outBlock = document.querySelector(".out");
+const btn = document.querySelector(".btn");
+const outBlock = document.querySelector(".out");
 
-// btn.addEventListener("click", (e) => {
-//   e.preventDefault();
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
 
-//   const fullNameValue = fullName.value;
-//   const phoneValue = phoneInput.value;
-//   const birthdayValue = birthdayInput.value;
-//   const emailValue = emailInput.value;
+  const fullNameValue = fullName.value;
+  const phoneValue = phoneInput.value;
+  const birthdayValue = birthdayInput.value;
+  const emailValue = emailInput.value;
 
-//   outBlock.textContent = `
-//   ПІБ: ${fullNameValue},
-//   Номер телефону: ${phoneValue},
-//   Дата народження: ${birthdayValue},
-//   Електронна пошта: ${emailValue}`;
+  outBlock.textContent = `
+  ПІБ: ${fullNameValue},
+  Номер телефону: ${phoneValue},
+  Дата народження: ${birthdayValue},
+  Електронна пошта: ${emailValue}`;
 
-//   fullName.value = "";
-//   phoneInput.value = "";
-//   birthdayInput.value = "";
-//   emailInput.value = "";
-// });
+  fullName.value = "";
+  phoneInput.value = "";
+  birthdayInput.value = "";
+  emailInput.value = "";
+});
 
 // ---- 5 ---- //
-// const circle = document.querySelectorAll(".circle");
-// let circleValue;
+const circle = document.querySelectorAll(".circle");
+let circleValue;
 
-// const newCircle = Array.from(circle).map((item) => {
-//   circleValue = item.getAttribute("data-anim");
-//   item.classList.add(circleValue);
-//   // console.log(circleValue);
-//   return circleValue;
-// });
+const newCircle = Array.from(circle).map((item) => {
+  circleValue = item.getAttribute("data-anim");
+  item.classList.add(circleValue);
+  // console.log(circleValue);
+  return circleValue;
+});
 
-// circle.forEach((item) => {
-//   const animation = item.classList.contains(circleValue);
-//   // console.log(animation);
-//   console.log(`Animation applied: ${animation}`);
-// });
+circle.forEach((item) => {
+  const animation = item.classList.contains(circleValue);
+  // console.log(animation);
+  console.log(`Animation applied: ${animation}`);
+});
 
 // ---- 6 ---- //
-// const span = document.getElementsByTagName("span");
-// const color = document.querySelectorAll(".color");
-// const outPrice = document.querySelector("#outprice");
-// console.log(color);
-// console.log(outPrice);
-
-// const getData = Array.from(color).map((item) => {
-//   let getDataValue = parseInt(item.getAttribute("data-price"));
-//   const colorEl = colorElement.getAttribute("color");
-
-//   item.addEventListener("click", () => {
-//     // Set the active class to the clicked color and remove it from other colors
-//     color.forEach((element) => {
-//       element.classList.remove("active");
-//     });
-//     color.classList.add("active");
-
-//     // Update the price with the selected color's price
-//     const priceElement = document.getElementById("outprice");
-//     priceElement.textContent = price.toFixed(2);
-//   });
-// });
-
-// console.log(getData);
-
-// Get all the color elements
 const colorElements = document.querySelectorAll(".color");
 const imgElements = document.querySelectorAll(".shoe");
 const gradientElements = document.querySelectorAll(".gradient");
